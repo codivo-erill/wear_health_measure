@@ -1,0 +1,29 @@
+# pub uses this INSTEAD of .gitignore for the package root, so it mirrors .gitignore
+# and only adds entries that git should keep but pub should not publish.
+
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+*.iml
+*.ipr
+*.iws
+.idea/
+/pubspec.lock
+**/doc/api/
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+
+# Published package only
+docs/
+.metadata
