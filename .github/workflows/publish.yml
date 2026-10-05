@@ -1,0 +1,21 @@
+# Automated publishing to pub.dev via OIDC (no secrets needed).
+# Enable it on https://pub.dev/packages/wear_health_measure/admin with
+#   repository:  codivo-erill/wear_health_measure
+#   tag pattern: v{{version}}
+#   environment: pub.dev   (and create that environment in the GitHub repo settings)
+# Release = bump version in pubspec.yaml + CHANGELOG.md, then:
+#   git tag v0.1.1 && git push origin v0.1.1
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    with:
+      environment: pub.dev
