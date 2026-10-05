@@ -1,5 +1,7 @@
 # wear_health_measure
 
+[![CI](https://github.com/codivo-erill/wear_health_measure/actions/workflows/ci.yml/badge.svg)](https://github.com/codivo-erill/wear_health_measure/actions/workflows/ci.yml)
+
 Live sensor readings on Wear OS through the Health Services **MeasureClient**:
 heart rate, steps, speed and the other numeric delta data types, **without
 starting an exercise session**.
